@@ -28,12 +28,21 @@ class busca_Binaria():
         def mostrar(self):
                 
                 if self.encontrado == True:
-                        print('O elemento {} foi encontrado na lista'.format(self.elemento))
+                        print('O elemento {} foi encontrado na lista!'.format(self.elemento))
                 else:
-                        print('Elemento não pertence a lista')
-    
+                        print('O elemento {} não foi encontrado na lista!'.format(self.elemento))
+lista = []
 
-lista = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+for x in range(1, 16):
+    lista.append(x)
+
+lista.sort()
+
+print(lista)
+
 
 pesquisa = busca_Binaria(lista, 20)
+pesquisa.buscar()
+
+pesquisa = busca_Binaria(lista, 15)
 pesquisa.buscar()
